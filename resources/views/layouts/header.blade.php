@@ -26,7 +26,7 @@
 	<meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
 	<meta name="author" content="ThemePixels">
 
-	<title>AliFastEZ Dashboard</title>
+	<title>AliFastEZ</title>
 
 	<!-- vendor css -->
 	<link href="{{ asset('/bracket_plus/lib/font-awesome/css/font-awesome.css') }}" rel="stylesheet">

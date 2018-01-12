@@ -1,6 +1,53 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class="row no-gutters flex-row-reverse ht-100v">
+        <div class="col-md-6 bg-gray-200 d-flex align-items-center justify-content-center">
+
+            <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+                {{ csrf_field() }}
+                <div class="login-wrapper wd-250 wd-xl-350 mg-y-30">
+                    <h4 class="tx-inverse tx-center">Sign Up</h4>
+                    <p class="tx-center mg-b-60">Create your own account.</p>
+
+                    <div class="form-group">
+                        <input id="name" type="text"  class="form-control" placeholder="Enter your full name" name="name" value="{{ old('name') }}" required autofocus>
+                    </div><!-- form-group -->
+
+                    <div class="form-group">
+                        <input id="email" type="email"  class="form-control" name="email"  placeholder="Enter your email" value="{{ old('email') }}" required autofocus>
+                    </div><!-- form-group -->
+
+                    <div class="form-group">
+                        <input id="password" type="password" class="form-control" placeholder="Enter your password" name="password" required>
+                    </div><!-- form-group -->
+
+                    <div class="form-group">
+                        <input id="password-confirm" type="password" class="form-control" placeholder="Enter your password" name="password_confirmation" required>
+                    </div><!-- form-group -->
+
+                    <button type="submit" class="btn btn-info btn-block">Sign Up</button>
+
+                    <div class="mg-t-60 tx-center">Already a member? <a href="" class="tx-info">Sign In</a></div>
+                </div><!-- login-wrapper -->
+            </form>
+        </div><!-- col -->
+
+
+        <div class="col-md-6 bg-br-primary d-flex align-items-center justify-content-center">
+            <div class="wd-250 wd-xl-450 mg-y-30">
+                <div class="signin-logo tx-28 tx-bold tx-white"><span class="tx-normal">[</span> AliFast <span class="tx-info">EZ</span> <span class="tx-normal">]</span></div>
+                <div class="tx-white-7 mg-b-60">The Admin Template For Perfectionist</div>
+
+                <h5 class="tx-white">Why bracket plus?</h5>
+                <p class="tx-white-6">When it comes to websites or apps, one of the first impression you consider is the design. It needs to be high quality enough otherwise you will lose potential users due to bad design.</p>
+                <p class="tx-white-6 mg-b-60">When your website or app is attractive to use, your users will not simply be using it, they’ll look forward to using it. This means that you should fashion the look and feel of your interface for your users.</p>
+                <a href="" class="btn btn-outline-light bd bd-white bd-2 tx-white pd-x-25 tx-uppercase tx-12 tx-spacing-2 tx-medium">Purchase Template</a>
+            </div><!-- wd-500 -->
+        </div>
+
+    </div><!-- row -->
+
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
