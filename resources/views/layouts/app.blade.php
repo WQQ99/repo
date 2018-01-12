@@ -1,80 +1,63 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+	@include('layouts.header')
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+	<body>
+	@yield('content')
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
+	<script src="{{ asset('/bracket_plus/lib/jquery/jquery.js') }}"></script>
+	<script src="{{ asset('/bracket_plus/lib/popper.js/popper.js') }}"></script>
+	<script src="{{ asset('/bracket_plus/lib/bootstrap/bootstrap.js') }}"></script>
+	<script src="{{ asset('/bracket_plus/lib/select2/js/select2.min.js') }}"></script>
+	<script>
+        $(function () {
+            'use strict';
 
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+            $('.select2').select2({
+                minimumResultsForSearch: Infinity
+            });
 
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                </div>
+            // show only the icons and hide left menu label by default
+            $('.menu-item-label,.menu-item-arrow').addClass('op-lg-0-force d-lg-none');
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
+            $(document).on('mouseover', function(e){
+                e.stopPropagation();
+                if($('body').hasClass('collapsed-menu')) {
+                    var targ = $(e.target).closest('.br-sideleft').length;
+                    if(targ) {
+                        $('body').addClass('expand-menu');
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
+                        // show current shown sub menu that was hidden from collapsed
+                        $('.show-sub + .br-menu-sub').slideDown();
 
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
+                        var menuText = $('.menu-item-label,.menu-item-arrow');
+                        menuText.removeClass('d-lg-none');
+                        menuText.removeClass('op-lg-0-force');
 
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
+                    } else {
+                        $('body').removeClass('expand-menu');
 
-        @yield('content')
-    </div>
+                        // hide current shown menu
+                        $('.show-sub + .br-menu-sub').slideUp();
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
-</body>
+                        var menuText = $('.menu-item-label,.menu-item-arrow');
+                        menuText.addClass('op-lg-0-force');
+                        menuText.addClass('d-lg-none');
+                    }
+                }
+            });
+
+            // Showing sub left menu
+            $('#showSubLeft').on('click', function(){
+                if($('body').hasClass('show-subleft')) {
+                    $('body').removeClass('show-subleft');
+                } else {
+                    $('body').addClass('show-subleft');
+                }
+            });
+
+        });
+	</script>
+	</body>
 </html>
