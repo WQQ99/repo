@@ -5,6 +5,7 @@
 
 	<body>
 	@yield('content')
+
 	<script>
         $(function () {
             'use strict';

@@ -18,5 +18,4 @@ class RegisterBuyerSellerController extends Controller
 	public function registerBuyer(Request $request) {
 		return view('register.buyer');
 	}
-
 }
