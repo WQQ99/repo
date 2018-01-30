@@ -15,13 +15,13 @@ class CreateBankDetailsTable extends Migration
 	{
 		Schema::create('bank_details', function (Blueprint $table) {
 			$table->increments('id');
-			$table->integer('account_no');
-			$table->string('account_type');
-			$table->string('bank_name');
-			$table->integer('card_no');
-			$table->integer('mm', 2);
-			$table->integer('yy', 2);
-			$table->integer('cvv', 3);
+			$table->integer('account_no')->nullable();
+			$table->string('account_type')->nullable();
+			$table->string('bank_name')->nullable();
+			$table->integer('card_no')->nullable();
+			$table->integer('mm');
+			$table->integer('yy');
+			$table->integer('cvv');
 			$table->integer('card_type_id')->unsigned();
 			$table->foreign('card_type_id')->references('id')->on('card_types');
 		});
