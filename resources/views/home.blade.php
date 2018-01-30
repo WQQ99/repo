@@ -36,33 +36,28 @@
 			<div id="buyer-container" class="card wd-350 shadow-base">
 				<div class="card-body pd-x-20 pd-xs-40">
 					<h5 class="tx-xs-24 tx-normal tx-gray-900 mg-b-15"style="text-align:center;"><u>I am a Buyer</u></h5>
-					<p class="mg-b-30 tx-14" style="text-align:center;">Get quality products!
-						<br/>Thousands of products available!</p>
-
+					<p class="mg-b-30 tx-14" style="text-align:center;">Get quality products!<br/>Thousands of products available!</p>
 					<button class="btn btn-indigo btn-block register-buyer-btn">Bring me there!</button>
-				</div><!-- card-body -->
-			</div><!-- card -->
+				</div>
+			</div>
 
 			<div id="supplier-container" class="card wd-350 shadow-base">
 				<div class="card-body pd-x-20 pd-xs-40">
 					<h5 class="tx-xs-24 tx-normal tx-gray-900 mg-b-15" style="text-align:center;"><u>I am a Supplier</u></h5>
-					<p class="mg-b-30 tx-14" style="text-align:center;">Fill your sales fast & easily!<br/><br/>    </p>
-
+					<p class="mg-b-30 tx-14" style="text-align:center;">Fill your sales fast & easily!<br/><br/></p>
 					<button class="btn btn-indigo btn-block register-supplier-btn">Start Free-Trial!</button>
-				</div><!-- card-body -->
-			</div><!-- card -->
-		</div><!-- d-flex -->
+				</div>
+			</div>
+		</div>
 
 		<script>
 			$(".register-buyer-btn").on("click", function(){
                 window.location.href = "/register-buyer";
 			});
-
             $(".register-supplier-btn").on("click", function(){
                 window.location.href = "/register-supplier";
             });
 		</script>
-
 	@elseif (Auth::user()->type == 1)
 		<div class="container">
 			<div class="row">
@@ -83,7 +78,6 @@
 				</div>
 			</div>
 		</div>
-
 	@elseif (Auth::user()->type == 0)
 		<div class="container">
 			<div class="row">
