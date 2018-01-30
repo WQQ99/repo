@@ -14,14 +14,44 @@
                         <input id="name" type="text"  class="form-control" placeholder="Enter your full name" name="name" value="{{ old('name') }}" required autofocus>
                     </div><!-- form-group -->
 
-                    <div class="form-group">
-                        <input id="email" type="email"  class="form-control" name="email"  placeholder="Enter your email" value="{{ old('email') }}" required autofocus>
+                    
+                      <!-- have not done the panel body-->
+                     <div class="form-group">
+                         <input id="contact number" type="number"  class="form-control" name="number"  placeholder="Enter your contact number" value="{{ old('number') }}" required autofocus>
                     </div><!-- form-group -->
-
+                    
+                     <div class="form-group">
+                         <input id="address" type="text"  class="form-control" name="address1"  placeholder="Address line 1" value="{{ old('address') }}" required autofocus>
+                    </div><!-- form-group -->
+                    
+                    <div class="form-group">
+                        <input id="address" type="text"  class="form-control" name="address2"  placeholder="Address line 2" value="{{ old('address') }}">
+                    </div><!-- form-group -->
+                    
+                    <div class="form-group">
+                        <input id="city" type="text"  class="form-control" name="city"  placeholder="Enter city/state" value="{{ old('city') }}" required autofocus>
+                    </div><!-- form-group -->
+                    
+                    <div class="form-group">
+                        <input id="zipcode" type="number"  class="form-control" name="zipcode"  placeholder="Enter your zipcode" value="{{ old('zipcode') }}" required autofocus>
+                    </div><!-- form-group -->
+                    
+                    <div class="form-group">
+                        <input id="country" type="text"  class="form-control" name="country"  placeholder="Enter country you are in" value="{{ old('address') }}" required autofocus>
+                    </div><!-- form-group -->
+                    
+                    <div class="form-group">
+                        <input id="email" type="text"  class="form-control" name="email"  placeholder="Enter your email" value="{{ old('email') }}" required autofocus>
+                    </div><!-- form-group -->   
+                    
+                     <div class="form-group">
+                        <input id="username" type="text"  class="form-control" name="username"  placeholder="Enter your desired username" value="{{ old('name') }}" required autofocus>
+                    </div><!-- form-group -->
+                    
                     <div class="form-group">
                         <input id="password" type="password" class="form-control" placeholder="Enter your password" name="password" required>
                     </div><!-- form-group -->
-
+                    
                     <div class="form-group">
                         <input id="password-confirm" type="password" class="form-control" placeholder="Enter your password" name="password_confirmation" required>
                     </div><!-- form-group -->

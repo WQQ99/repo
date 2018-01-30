@@ -14,16 +14,14 @@ class CreateCompaniesTable extends Migration
     public function up()
     {
         Schema::create('companies', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('CompanyID');
             $table->string('Country', 100);
             $table->string('Address1', 100);
-            $table->string('Address2', 100, nullOrEmptyString());
+            $table->string('Address2', 100)->nullable();
             $table->integer('Zipcode', 10);
             $table->string('City', 50);
             $table->integer('Supplier_id')->unsigned();
-            $table->foreign('Supplier_id')->references('id')->on('Supplier');
-            
-            
+            $table->foreign('Supplier_id')->references('id')->on('Supplier'); 
         });
     }
 
