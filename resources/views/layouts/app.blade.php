@@ -4,6 +4,7 @@
 	@include('layouts.header')
 
 	<body>
+
 	@yield('content')
 
 	<script>
@@ -17,11 +18,11 @@
             // show only the icons and hide left menu label by default
             $('.menu-item-label,.menu-item-arrow').addClass('op-lg-0-force d-lg-none');
 
-            $(document).on('mouseover', function(e){
+            $(document).on('mouseover', function (e) {
                 e.stopPropagation();
-                if($('body').hasClass('collapsed-menu')) {
+                if ($('body').hasClass('collapsed-menu')) {
                     var targ = $(e.target).closest('.br-sideleft').length;
-                    if(targ) {
+                    if (targ) {
                         $('body').addClass('expand-menu');
 
                         // show current shown sub menu that was hidden from collapsed
@@ -45,8 +46,8 @@
             });
 
             // Showing sub left menu
-            $('#showSubLeft').on('click', function(){
-                if($('body').hasClass('show-subleft')) {
+            $('#showSubLeft').on('click', function () {
+                if ($('body').hasClass('show-subleft')) {
                     $('body').removeClass('show-subleft');
                 } else {
                     $('body').addClass('show-subleft');
@@ -55,6 +56,8 @@
 
         });
 	</script>
+
 	@yield('js')
+
 	</body>
 </html>
