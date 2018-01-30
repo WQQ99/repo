@@ -12,11 +12,11 @@ class RegisterBuyerSellerController extends Controller
 	}
 
 	public function registerSupplier(Request $request) {
-
+		return view('registration.supplier');
 	}
 
 	public function registerBuyer(Request $request) {
-
+		return view('registration.buyer');
 	}
 
 }
