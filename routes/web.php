@@ -19,4 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'RegisterBuyerSellerController@registerSelection')->name('home');
 Route::get('/', 'HomeController@index');
+Route::get('/register-buyer', 'RegisterBuyerSellerController@registerBuyer')->name('registerBuyer');
+Route::get('/register-supplier', 'RegisterBuyerSellerController@registerSupplier')->name('registerSupplier');
+
+
 Route::get('/register-selection', 'RegisterBuyerSellerController@registerSelection');
