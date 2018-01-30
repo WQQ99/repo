@@ -5,11 +5,6 @@
 
 	<body>
 	@yield('content')
-
-	<script src="{{ asset('/bracket_plus/lib/jquery/jquery.js') }}"></script>
-	<script src="{{ asset('/bracket_plus/lib/popper.js/popper.js') }}"></script>
-	<script src="{{ asset('/bracket_plus/lib/bootstrap/bootstrap.js') }}"></script>
-	<script src="{{ asset('/bracket_plus/lib/select2/js/select2.min.js') }}"></script>
 	<script>
         $(function () {
             'use strict';
