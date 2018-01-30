@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCardtypesTable extends Migration
+class CreateStatusesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateCardtypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('CardType', function (Blueprint $table) {
-           $table->Char('CardType', 4);
-           $table->Char('Description', 100);
-
+        Schema::create('statuses', function (Blueprint $table) {
+            $table->increments('id');
+            $table->timestamps();
+            $table->string('status');
         });
     }
 
@@ -27,6 +27,6 @@ class CreateCardtypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cardtypes');
+        Schema::dropIfExists('statuses');
     }
 }

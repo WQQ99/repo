@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class cardtype extends Model
+class cardType extends Model
 {
     //
 }

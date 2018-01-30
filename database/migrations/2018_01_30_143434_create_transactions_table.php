@@ -13,12 +13,11 @@ class CreateTransactionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('Transactions', function (Blueprint $table) {
-            $table->increments('TransactionID');
-            $table->dateTime('DateTrans');
-            $table->string('Status_Status')->unsigned();
-            $table->foreign('Status_Status')->references('Status')->on('Status');
-
+        Schema::create('transactions', function (Blueprint $table) {
+            $table->increments('id');
+            $table->dateTime('date_transaction');
+            $table->integer('status_id')->unsigned();
+            $table->foreign('status_id')->references('id')->on('statuses');
         });
     }
 
