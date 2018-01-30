@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-	<div class="br-mainpanel">
+	<div class="br-mainpanel" style="margin-left: 0;">
 
 		<div class="br-pageheader">
 			<nav class="breadcrumb pd-0 mg-0 tx-12">
