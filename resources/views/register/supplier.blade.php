@@ -62,10 +62,12 @@
 								</div>
 							</div><!-- col-4 -->
 						</div><!-- row -->
+
 						<div class="form-layout-footer bd pd-20 bd-t-0">
 							<button class="btn btn-info">Submit Form</button>
 							<button class="btn btn-secondary">Cancel</button>
 						</div><!-- form-group -->
+
 					</form>
 				</div><!-- form-layout -->
 			</div><!-- row -->
