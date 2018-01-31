@@ -63,19 +63,6 @@
             </form>
         </div><!-- col -->
 
-
-        <div class="col-md-6 bg-br-primary d-flex align-items-center justify-content-center">
-            <div class="wd-250 wd-xl-450 mg-y-30">
-                <div class="signin-logo tx-28 tx-bold tx-white"><span class="tx-normal">[</span> AliFast <span class="tx-info">EZ</span> <span class="tx-normal">]</span></div>
-                <div class="tx-white-7 mg-b-60">The Admin Template For Perfectionist</div>
-
-                <h5 class="tx-white">Why bracket plus?</h5>
-                <p class="tx-white-6">When it comes to websites or apps, one of the first impression you consider is the design. It needs to be high quality enough otherwise you will lose potential users due to bad design.</p>
-                <p class="tx-white-6 mg-b-60">When your website or app is attractive to use, your users will not simply be using it, they’ll look forward to using it. This means that you should fashion the look and feel of your interface for your users.</p>
-                <a href="" class="btn btn-outline-light bd bd-white bd-2 tx-white pd-x-25 tx-uppercase tx-12 tx-spacing-2 tx-medium">Purchase Template</a>
-            </div><!-- wd-500 -->
-        </div>
-
     </div><!-- row -->
 
 <div class="container">
