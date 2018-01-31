@@ -23,5 +23,6 @@ Route::get('/register-buyer', 'RegisterBuyerSellerController@registerBuyer')->na
 Route::get('/register-supplier', 'RegisterBuyerSellerController@registerSupplier')->name('registerSupplier');
 Route::post('/register-buyer', 'RegisterBuyerSellerController@processRegisterBuyer')->name('processRegisterBuyer');
 Route::post('/register-supplier', 'RegisterBuyerSellerController@processRegisterSeller')->name('processRegisterSeller');
+Route::get('/chatbot', 'ChatbotController@index');
 
 Route::get('/register-selection', 'RegisterBuyerSellerController@registerSelection');

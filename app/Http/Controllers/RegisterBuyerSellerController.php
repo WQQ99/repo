@@ -18,4 +18,12 @@ class RegisterBuyerSellerController extends Controller
 	public function registerBuyer(Request $request) {
 		return view('register.buyer');
 	}
+
+	public function processRegisterSupplier(Request $request) {
+
+	}
+
+	public function processRegisterBuyer(Request $request) {
+
+	}
 }
