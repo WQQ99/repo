@@ -43,13 +43,43 @@
 						<div class="card-body pd-25">
 							<div class="media-list">
 
-								<div class="media">
+								<div class="media mg-t-20">
 									<img src="http://via.placeholder.com/280x280" class="wd-36 rounded-circle mg-r-20"
 									     alt="">
 									<div class="media-body tx-12">
-										<div class="chat-1">
-											Hey, what's up?
+                                                                            <div class="chat-1">
+										Hi there, how can i help you?
+                                                                                <br/>
+                                                                                <br/>
+                                                                                <button class="mg-t-28 btn btn-sm  btn-outline-primary" style="font-size: 13px;">Browsing for item</button>
+                                                                                <br/>
+                                                                                <button class="mg-t-28 btn btn-sm  btn-outline-primary" style="font-size: 13px;">Request for item</button>
+                                                                            </div>
+										<span class="chat-time">3:00pm</span>
+									</div><!-- media-body -->
+								</div><!-- media -->
+                                                                
+                                                                <div class="media mg-t-20">
+									<img src="http://via.placeholder.com/280x280" class="wd-36 rounded-circle mg-r-20"
+									     alt="">
+									<div class="media-body tx-12">
+										<div class="chat-2">
+											I'm browsing for items !
 										</div>
+										<span class="chat-time">3:10pm</span>
+										
+									</div><!-- media-body -->
+								</div><!-- media -->
+                                                                
+                                                                <div class="media mg-t-20">
+									<img src="http://via.placeholder.com/280x280" class="wd-36 rounded-circle mg-r-20"
+									     alt="">
+									<div class="media-body tx-12">
+                                                                            <div class="chat-1">
+										What items are you looking for?
+                                                                                
+                                                                                <br/>                                                                        
+                                                                            </div>
 										<span class="chat-time">3:00pm</span>
 									</div><!-- media-body -->
 								</div><!-- media -->
