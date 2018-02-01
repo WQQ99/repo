@@ -55,11 +55,18 @@
 											        data-response="Request for Item"
 											        style="font-size: 13px;">Request for Item
 											</button>
+                                                                                        </br>
+                                                                                        <button class="mg-t-10 btn btn-sm btn-outline-primary selection-response-btn"
+											        data-response="Online Chat (Under maintenance)"
+											        style="font-size: 13px;" >Online Chat (Under maintenance)
+                                                                                                
+											</button>
+                                                                                        
 										</div>
-										<span class="chat-time">3:00pm</span>
+										<span class="chat-time"></span>
 									</div><!-- media-body -->
 								</div><!-- media -->
-
+                                                                
 								<div class="media mg-t-20" style="display:none;">
 									<img src="http://via.placeholder.com/280x280" class="wd-36 rounded-circle mg-r-20"
 									     alt="">
@@ -67,7 +74,7 @@
 										<div class="chat-2">
 											I'm browsing for items !
 										</div>
-										<span class="chat-time">3:10pm</span>
+										<span class="chat-time"></span>
 									</div>
 								</div>
 
@@ -77,10 +84,9 @@
 									<div class="media-body tx-12">
 										<div class="chat-1">
 											What items are you looking for?
-
 											<br/>
 										</div>
-										<span class="chat-time">3:00pm</span>
+										<span class="chat-time"></span>
 									</div><!-- media-body -->
 								</div><!-- media -->
 
@@ -91,13 +97,13 @@
 										<div class="chat-2">
 											So you want to eat snow? is it safe?
 										</div>
-										<span class="chat-time">3:10pm</span>
+										<span class="chat-time"></span>
 										<hr class="invisible mg-y-2">
 
 										<div class="chat-2">
 											Hahahaah!
 										</div>
-										<span class="chat-time">3:12pm</span>
+										<span class="chat-time"></span>
 
 										<hr class="invisible mg-y-2">
 
@@ -105,7 +111,7 @@
 											Researchers are generally less concerned about what's in the snow
 											than the fact that climate change may be causing it to rapidly disappear.
 										</div>
-										<span class="chat-time">3:12pm</span>
+										<span class="chat-time"></span>
 									</div><!-- media-body -->
 								</div><!-- media -->
 
@@ -118,14 +124,14 @@
 											important person there and I will take the lead from you on the type of
 											photos you want.
 										</div>
-										<span class="chat-time">3:20pm</span>
+										<span class="chat-time"></span>
 
 										<hr class="invisible mg-y-2">
 
 										<div class="chat-1">
 											It’s your day so I do what you say.
 										</div>
-										<span class="chat-time">3:21pm</span>
+										<span class="chat-time"></span>
 									</div><!-- media-body -->
 								</div><!-- media -->
 
@@ -137,7 +143,7 @@
 											<div class="chat-2">
 												I'm browsing for items !
 											</div>
-											<span class="chat-time">3:10pm</span>
+											<span class="chat-time"></span>
 										</div>
 									</div>
 								</div>
@@ -150,7 +156,7 @@
 											<div class="chat-1">
 
 											</div>
-											<span class="chat-time">3:10pm</span>
+											<span class="chat-time"></span>
 										</div>
 									</div>
 								</div>
@@ -173,27 +179,44 @@
 	</div>
 
 	<script>
-
-
+           
 		$('body').on('click', ".selection-response-btn", function(){
 			$response = $(this).data('response');
 
             $template_text_elem = $("#response-template > div > div > div.chat-2");
             $template_text_elem.html($response);
+            
 
             $("#chat-thread").html($("#chat-thread").html() + $("#response-template").html());
 
 			console.log($response);
-
+                                 
+            
             if ($response == "Browsing for Item") {
 
                 $chatbot_template_text_elem = $("#chatbot-response-template > div > div > div.chat-1");
+                
                 $chatbot_template_text_elem.html("What category of items will you be looking for?");
                 $("#chat-thread").html($("#chat-thread").html() + $("#chatbot-response-template").html());
-
-            } else if ($response == "Request for Item") {
+                
+            } 
+            else if ($response == "Request for Item") {
+                $chatbot_template_text_elem = $("#chatbot-response-template > div > div > div.chat-1");
+                $chatbot_template_text_elem.html("What is the items you're looking for?");
+                $("#chat-thread").html($("#chat-thread").html() + $("#chatbot-response-template").html());
+                
 
             }
+            else if ($response == "Online Chat (Under maintenance)"){
+                $chatbot_template_text_elem = $("#chatbot-response-template > div > div > div.chat-1");
+                
+                $chatbot_template_text_elem.html("Sorry, AliFastEz Bot is under maintenance");
+                $("#chat-thread").html($("#chat-thread").html() + $("#chatbot-response-template").html());
+                
+                
+            }
+            
+                
 		});
 
         $("#chatbot-input-txtbox").keypress(function(event){
